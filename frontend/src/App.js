@@ -57,16 +57,13 @@ export default function App() {
         abortEarly: false,
       });
 
-      const response = await fetch(
-        "https://kufhnbgos4.execute-api.eu-north-1.amazonaws.com/Prod2",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(validatedData),
-        }
-      );
+      const response = await fetch("http://localhost:5000/api/form_data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(validatedData),
+      });
 
       if (response.ok) {
         const responseData = await response.json();
@@ -81,12 +78,15 @@ export default function App() {
       setSuccessSubmit(SuccessSubmit);
       setSuccessSubmit(true);
     } catch (error) {
+
+     
       const errors = {};
       error.inner.forEach((err) => {
         errors[err.path] = err.message;
       });
 
-      setValidationErrors(errors);
+       setValidationErrors(errors);
+      // setValidationErrors({ general: error.message });
     }
   }
 
