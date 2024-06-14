@@ -78,14 +78,12 @@ export default function App() {
       setSuccessSubmit(SuccessSubmit);
       setSuccessSubmit(true);
     } catch (error) {
-
-     
       const errors = {};
       error.inner.forEach((err) => {
         errors[err.path] = err.message;
       });
 
-       setValidationErrors(errors);
+      setValidationErrors(errors);
       // setValidationErrors({ general: error.message });
     }
   }
@@ -94,6 +92,7 @@ export default function App() {
     setSuccessSubmit(false);
     setValues(initialData);
     setValidationErrors({});
+    setSelectedCountry(initalValueCountry);
   }
 
   function handleDeleteForm() {
@@ -113,10 +112,11 @@ export default function App() {
           const response = await fetch(
             "https://valid.layercode.workers.dev/list/countries?format=select&flags=true&value=code"
           );
-          const data = await response.json();
 
+          const data = await response.json();
+          console.log(data)
+console.log(data.countries)
           setCountries(data.countries);
-          setSelectedCountry(initalValueCountry);
         } catch (error) {}
       }
 
