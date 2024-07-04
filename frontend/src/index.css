@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #adb5bd;
-  background: #b7ccd0;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,10 +26,10 @@ body {
 h1 {
   text-align: center;
   margin-top: 2.4rem;
-  font-size: 4.4rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  color: #45260a;
+  color: #fffafa;
   text-transform: uppercase;
   font-family: "Russo One";
 }
@@ -42,7 +42,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 3rem;
-  color: #45260a;
+  color: #fffafa;
   font-weight: 600;
 }
 
@@ -69,28 +69,27 @@ h4 {
 }
 
 h4 span {
-  color: #364fc7;
+  text-decoration: underline;
   font-weight: 700;
-  
 }
 
 .form {
   max-width: 120rem;
   margin: 2rem 2rem;
   padding: 1.6rem;
-  
 }
 
 .label-input-group {
   display: flex;
   gap: 1.6rem;
   align-items: center;
+
   margin-bottom: 1.2rem;
 }
 
 label {
-  color: #343a40;
-  font-weight: 700;
+  color: #fffaf0;
+  font-weight: 900;
   font-size: 2.4rem;
   font-family: "Rubik Bubles";
 }
@@ -101,6 +100,7 @@ textarea {
   padding: 0.4rem;
   font-size: 1.8rem;
   box-shadow: inset 10px 10px 20px #e0e0e0, inset -10px -10px 20px #ffffff;
+  background-color: #f5f5f5;
 }
 
 textarea {
@@ -165,6 +165,7 @@ input[type="checkbox"]:focus {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  font-weight: bold;
 }
 
 #checkbox {

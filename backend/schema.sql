@@ -15,5 +15,6 @@ CREATE TABLE form_data (
   selectedCountry VARCHAR(255)
 );
 
-INSERT INTO form_data (firstName, lastName, email, mobileNumber, birth, password, selectedProduct, selectedGender, feedback, selectedCountry)
-VALUES ('John', 'Doe', 'john.doe@example.com', '1234567890', '1990-01-01', 'password123', 'Product A', 'Male', 'Great service!', 'Country A');
+-- INSERT INTO form_data (firstName, lastName, email, mobileNumber, birth, password, selectedProduct, selectedGender, feedback, selectedCountry)
+-- VALUES ('John', 'Doe', 'john.doe@example.com', '1234567890', '1990-01-01', 'password123', 'Product A', 'Male', 'Great service!', 'Country A');
+

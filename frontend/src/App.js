@@ -56,7 +56,7 @@ export default function App() {
       const validatedData = await userSchema.validate(formData, {
         abortEarly: false,
       });
-
+console.log(validatedData)
       const response = await fetch("http://localhost:5000/api/form_data", {
         method: "POST",
         headers: {
